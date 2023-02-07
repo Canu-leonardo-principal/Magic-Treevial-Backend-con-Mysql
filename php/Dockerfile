@@ -1,5 +1,5 @@
-FROM php:fpm-bullseye
+FROM php:8.2-fpm-alpine3.17
 
-RUN apt update
-RUN apt upgrade
+RUN apk update
+RUN apk upgrade
 RUN docker-php-ext-install mysqli pdo pdo_mysql
