@@ -1,0 +1,27 @@
+networks:
+  dev:
+
+services:
+  apache:
+    build: './apache/'
+    ports:
+      - 80:80
+    volumes:
+      - ./src/:/var/www/html/
+    depends_on:
+      - php
+    networks:
+      - dev
+  php:
+    build: './php/'
+    networks:
+      - dev
+    volumes:
+      - ./src/:/var/www/html/
+  mysql:
+    build: './sql/'
+    networks:
+      - dev
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+
