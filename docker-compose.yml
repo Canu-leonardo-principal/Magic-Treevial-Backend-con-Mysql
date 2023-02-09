@@ -20,7 +20,7 @@ services:
     volumes:
       - ./src/:/var/www/html/
   mysql:
-    build: './sql/'
+    image: mysql:latest
     networks:
       - dev
     environment:
@@ -28,4 +28,6 @@ services:
       - MYSQL_DATABASE=main
     ports:
       - 3306:3306
+    volumes:
+      - ./sql/:/docker-entrypoint-initdb.d/
 
