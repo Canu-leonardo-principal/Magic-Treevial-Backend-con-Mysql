@@ -29,25 +29,23 @@ Scripts are useful when it comes to creating new projects with Docker'd Xampp.
 
 ## Instructions
 
-To run Docker'd Xampp, typing in your project folder:
+1) Clone this repository
 
-```sh
-docker compose up
-```
+    ```sh
+    git clone https://codeberg.org/hotbrightsunshine/dockerd-xampp.git
+    ```
 
-should suffice.
+2) Execute `scripts/init.sh`
 
-If you are getting an error like:
+    ```sh
+    ./scripts/init.sh
+    ```
 
-```plain
-Uncaught PDOException: could not find driver in ...
-```
+3) Launch `docker`
 
-try re-building the `php` image as follows:
-
-```sh
-docker compose build php
-```
+    ```sh
+    docker compose up --build -d
+    ```
 
 ### To connect
 
