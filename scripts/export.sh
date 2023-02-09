@@ -1,2 +1,2 @@
 mkdir out
-zip -r out/export.zip *
+zip -r out/export.zip src/*
