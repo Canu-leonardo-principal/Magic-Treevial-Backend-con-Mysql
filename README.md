@@ -30,10 +30,10 @@ I don't excel in writing scripts. They are primitive, but work. If you would lik
 
 ## Instructions
 
-1) Clone this repository
+1) Clone this repository and rename your project
 
     ```sh
-    git clone https://codeberg.org/hotbrightsunshine/dockerd-xampp.git
+    git clone https://codeberg.org/hotbrightsunshine/dockerd-xampp.git <project_name>
     ```
 
 2) Execute `scripts/init.sh`
