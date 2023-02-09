@@ -8,6 +8,25 @@ This template contains:
 - an Apache HTTP(d) server,
 - a MySQL server.
 
+## Folder structure
+
+```yaml
+dockerd-xampp:
+    - apache: "Configuration for the Apache Http/d server."
+    - php: "PHP's Dockerfile. It is able to install extensions."
+    - scripts: "(Really easy) Bash Scripts to export a project, or to purge existing images and containers."
+    - sql: "SQL Scripts to run on startup."
+    - out: "Folder containing exported projects."
+```
+
+### Scripts
+
+Scripts are useful when it comes to creating new projects with Docker'd Xampp.
+
+- `export.sh` creates a `.zip` of the `src` folder,
+- `init.sh` deletes the pre-existing `.git` folder, initializes a new repository, adds everything and commits,
+- `reset.sh` purges pre-existing images and containers. (It is useful)
+
 ## Instructions
 
 To run Docker'd Xampp, typing in your project folder:
