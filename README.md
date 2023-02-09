@@ -48,6 +48,8 @@ I don't excel in writing scripts. They are primitive, but work. If you would lik
     docker compose up --build -d
     ```
 
+4) Visit `localhost:80`
+
 ### To connect
 
 To connect to the database, I write:
