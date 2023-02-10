@@ -45,24 +45,12 @@ I don't excel in writing scripts. They are primitive, but work. If you would lik
 3) Launch `docker`
 
     ```sh
-    docker compose up --build -d
+    docker compose up -d
     ```
 
 4) Visit `localhost:80`
 
+> ⚠️ Warning: Whenever you change your files, be sure to type `docker compose down`, before running `docker compose up -d` once again.
+
 ### To connect
 
-To connect to the database, I write:
-
-```php
-"ip"    => "mysql",
-"user"  => "root",
-"pass"  => "root",
-"db"    => "main", 
-```
-
-### To avoid errors
-
-- If `mysql` service is not starting correctly, try deleting all images and all containers. Then build everything again. That worked.
-
-- Using `network`, services are reachable by typing their name. Docker translates it automatically to its own IP address.
