@@ -50,7 +50,16 @@ I don't excel in writing scripts. They are primitive, but work. If you would lik
 
 4) Visit `localhost:80`
 
-> ⚠️ Warning: Whenever you change your files, be sure to type `docker compose down`, before running `docker compose up -d` once again.
+> ⚠️ Warning: Whenever you change your files, be sure to type `docker compose down`, before running `docker compose up -d` once again. (e.g. Your database won't execute newer scripts!)
 
-### To connect
+## To connect
 
+Connecting to the Docker'd Xampp services is easy.
+
+| Service | Hostname | Port   | Username | Password | Default DB |
+| -       | -        | -      | -        | -        | - |
+| Apache  | `apache` | `80`   | /        | /        | / |
+| PHP     | `php`    | `9000` | /        | /        | / |
+| MySQL   | `mysql`  | `3306` | `root`   | `root`   | `main` |
+
+For example: to address the MySQL Database, connect to the hostname `mysql` inside your PHP page.
