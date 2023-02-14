@@ -25,8 +25,7 @@ Scripts are useful when it comes to creating new projects with Docker'd Xampp.
 I don't excel in writing scripts. They are primitive, but work. If you would like to improve them, feel free to do so!
 
 - `export.sh` creates a `.zip` of the `src` folder,
-- `init.sh` deletes the pre-existing `.git` folder, initializes a new repository, adds everything and commits,
-- `reset.sh` purges pre-existing images and containers. (It is useful)
+- `init.sh` deletes the pre-existing `.git` folder, initializes a new repository, adds everything and commits.
 
 ## Instructions
 
