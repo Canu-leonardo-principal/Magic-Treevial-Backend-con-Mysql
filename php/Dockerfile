@@ -1,5 +1,7 @@
-FROM php:8.2-fpm-alpine3.17
+FROM php:apache
 
-RUN apk update
-RUN apk upgrade
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+RUN docker-php-ext-install mysqli pdo pdo_mysql 
+RUN a2enmod rewrite
+RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
+
+EXPOSE 80
