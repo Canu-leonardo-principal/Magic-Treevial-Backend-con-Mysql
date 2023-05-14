@@ -60,5 +60,6 @@ Connecting to the Docker'd Xampp services is easy.
 | Apache  | `apache` | `80`   | /        | /        | / |
 | PHP     | `php`    | `9000` | /        | /        | / |
 | MySQL   | `mysql`  | `3306` | `root`   | `root`   | `main` |
+| PHPMyAdmin | `mysql` | `3306` | `root` | `root` | `main` | 
 
 For example: to address the MySQL Database, connect to the hostname `mysql` inside your PHP page.
