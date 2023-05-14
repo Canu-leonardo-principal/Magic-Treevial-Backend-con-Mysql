@@ -4,25 +4,17 @@ networks:
   dev:
 
 services:
-
-  apache:
-    build: './apache/'
+  php:
+    build: './php/'
     ports:
-      - 80:80
+      - 8080:80
+      - 9000:9000
     volumes:
       - ./src/:/var/www/html/
     depends_on:
-      - php
       - mysql
     networks:
       - dev
-
-  php:
-    build: './php/'
-    networks:
-      - dev
-    volumes:
-      - ./src/:/var/www/html/
 
   mysql:
     image: mysql:latest
@@ -46,4 +38,5 @@ services:
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=
-
+    depends_on:
+      - mysql
